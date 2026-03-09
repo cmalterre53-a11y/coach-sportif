@@ -1,0 +1,143 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.scrolled {
+  background-color: var(--color-bg);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-heading), serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: -0.5px;
+  transition: color 0.3s;
+}
+
+.scrolled .logo {
+  color: var(--color-primary);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navLink {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.3s;
+  letter-spacing: 0.3px;
+}
+
+.navLink:hover {
+  color: var(--color-white);
+}
+
+.scrolled .navLink {
+  color: var(--color-text);
+}
+
+.scrolled .navLink:hover {
+  color: var(--color-primary);
+}
+
+.navCta {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  padding: 10px 24px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.navCta:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+  z-index: 1001;
+}
+
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-white);
+  transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+
+.scrolled .burger span {
+  background-color: var(--color-text);
+}
+
+.burgerOpen span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burgerOpen span:nth-child(2) {
+  opacity: 0;
+}
+
+.burgerOpen span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-bg);
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .navOpen {
+    transform: translateX(0);
+  }
+
+  .navLink {
+    font-size: 1.25rem;
+  }
+
+  .navCta {
+    font-size: 1rem;
+    padding: 14px 32px;
+  }
+}
