@@ -30,10 +30,10 @@ export default function Hero() {
           <div className={styles.imageDecor} />
           <div className={styles.imageWrap}>
             <Image
-              src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=1000&fit=crop&q=90"
+              src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=700&fit=crop&crop=top&q=90"
               alt="Coach sportif en seance d'entrainement"
               width={800}
-              height={1000}
+              height={700}
               className={styles.image}
               priority
             />
