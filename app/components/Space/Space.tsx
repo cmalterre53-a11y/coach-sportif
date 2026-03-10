@@ -37,13 +37,6 @@ const spaces = [
     desc: "Tapis, rouleaux de massage, blocs de yoga — un espace dedie a la recuperation et a la mobilite.",
     size: "small" as const,
   },
-  {
-    image:
-      "https://images.unsplash.com/photo-1502224562085-639556652f33?w=800&h=500&fit=crop",
-    title: "Coaching en Exterieur",
-    desc: "Quand la meteo le permet, on s'entraine au grand air : parcs, escaliers, parcours urbains — la ville devient votre terrain de jeu.",
-    size: "wide" as const,
-  },
 ];
 
 export default function Space() {

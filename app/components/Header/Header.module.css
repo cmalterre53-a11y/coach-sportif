@@ -4,11 +4,11 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  background-color: var(--color-bg);
+  transition: box-shadow 0.3s;
 }
 
 .scrolled {
-  background-color: var(--color-bg);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
 }
 
@@ -26,13 +26,8 @@
   font-family: var(--font-heading), serif;
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--color-white);
-  letter-spacing: -0.5px;
-  transition: color 0.3s;
-}
-
-.scrolled .logo {
   color: var(--color-primary);
+  letter-spacing: -0.5px;
 }
 
 .nav {
@@ -45,20 +40,12 @@
   font-family: var(--font-body), sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
-  transition: color 0.3s;
+  color: var(--color-text);
+  transition: color 0.2s;
   letter-spacing: 0.3px;
 }
 
 .navLink:hover {
-  color: var(--color-white);
-}
-
-.scrolled .navLink {
-  color: var(--color-text);
-}
-
-.scrolled .navLink:hover {
   color: var(--color-primary);
 }
 
@@ -89,12 +76,8 @@
   display: block;
   width: 24px;
   height: 2px;
-  background-color: var(--color-white);
-  transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
-}
-
-.scrolled .burger span {
   background-color: var(--color-text);
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 .burgerOpen span:nth-child(1) {
